@@ -16,6 +16,15 @@ function returnXO() {
   return "X";
 }
 
+function playAlertAnimation(){
+  var element = document.getElementById("child-alert-container");
+  
+  element.classList.add("alert-animation");
+  element.addEventListener("animationend", function () {
+    element.classList.remove("alert-animation");
+  });
+}
+
 function openAlert() {
   board = getBoardStatus();
   boardFull = true;
@@ -30,21 +39,22 @@ function openAlert() {
   if (boardFull == true) {
     congratulations.innerHTML = "UNFORTUNATELY THE GAME IS A TIE";
     congratulations.style.backgroundColor = "#FFA500";
-    console.log("1 ran...");
-    return (element.style.display = "flex");
+    element.style.display = "flex";
+    return playAlertAnimation();
   }
 
   if (congratulationsRan == false) {
     congratulations.innerHTML =
       "CONGRATULATIONS " + returnXO() + ", YOU ARE THE WINNER!";
-    element.style.display = "flex";
-    console.log("2 ran...");
-    return (congratulationsRan = true);
+      congratulationsRan = true;
+      element.style.display = "flex";
+    return playAlertAnimation();
   }
 
-  element.style.display = "flex";
   congratulations.innerHTML = returnXO() + " HAD ALREADY WON!";
   congratulations.style.backgroundColor = "#C31248";
+  element.style.display = "flex";
+  playAlertAnimation()
 }
 
 function alertWinner() {

@@ -121,6 +121,22 @@ body {
   background-color: #f5f5f5;
 }
 
+@keyframes opacity-up {
+  0% {
+    transform: translate(-50%, -35%);
+    opacity: 10%;
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+    opacity: 100%;
+  }
+}
+
+.alert-animation {
+  animation: opacity-up .3s ease-in-out;
+}
+
 @media (max-width: 768px) {
   .alert-container {
     width: 100%;
