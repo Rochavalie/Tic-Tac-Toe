@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIC TAC TOE</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">TIC TAC TOE</div>
+      <div class="board">
+        <div class="row" id="row-1">
+          <button
+            class="column"
+            id="column-1"
+            onclick="changeBoard(this)"
+          ></button>
+          <button
+            class="column"
+            id="column-2"
+            onclick="changeBoard(this)"
+          ></button>
+          <button
+            class="column"
+            id="column-3"
+            onclick="changeBoard(this)"
+          ></button>
+        </div>
+        <div class="row" id="row-2">
+          <button
+            class="column"
+            id="column-4"
+            onclick="changeBoard(this)"
+          ></button>
+          <button
+            class="column"
+            id="column-5"
+            onclick="changeBoard(this)"
+          ></button>
+          <button
+            class="column"
+            id="column-6"
+            onclick="changeBoard(this)"
+          ></button>
+        </div>
+        <div class="row" id="row-3">
+          <button
+            class="column"
+            id="column-7"
+            onclick="changeBoard(this)"
+          ></button>
+          <button
+            class="column"
+            id="column-8"
+            onclick="changeBoard(this)"
+          ></button>
+          <button
+            class="column"
+            id="column-9"
+            onclick="changeBoard(this)"
+          ></button>
+        </div>
+      </div>
+    </div>
+    <div class="winner-alert" id="parent-alert-container">
+        <div class="alert-container" id="child-alert-container">
+            <div class="alert-title" id="alert-title">
+            </div>
+            <div class="play-again">
+                <button class="btn-group" id="close-btn" onclick="closeAlert()">CLOSE</button>
+                <button class="btn-group" id="reset-btn" onclick="window.location.reload()">RESET</button>
+            </div>
+        </div>
+    </div>
+    <div class="winner-alert" id="parent-alert-container">
+      <div class="alert-container" id="child-alert-container">
+          <div class="alert-title" id="alert-title">
+          </div>
+          <div class="play-again">
+              <button class="btn-group" id="close-btn" onclick="closeAlert()">CLOSE</button>
+              <button class="btn-group" id="reset-btn" onclick="window.location.reload()">RESET</button>
+          </div>
+      </div>
+  </div>
+  </body>
+  <script src="script.js"></script>
+</html>
