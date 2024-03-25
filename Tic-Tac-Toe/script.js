@@ -1,6 +1,7 @@
 currentTurn = 0;
 runGame = true;
 congratulationsRan = false;
+winFound = false;
 
 function getBoardStatus() {
   board = [];
@@ -36,7 +37,7 @@ function openAlert() {
       boardFull = false;
     }
 
-  if (boardFull == true) {
+  if (boardFull == true && winFound == false) {
     congratulations.innerHTML = "UNFORTUNATELY THE GAME IS A TIE";
     congratulations.style.backgroundColor = "#FFA500";
     element.style.display = "flex";
@@ -59,6 +60,7 @@ function openAlert() {
 
 function alertWinner() {
   runGame = false;
+  winFound = true;
   return openAlert();
 }
 
